@@ -1,13 +1,13 @@
 # Minecraft Python Test
 
-A simple Python script to interact with Minecraft using the `mcpi` library. This script demonstrates basic Minecraft automation, including placing blocks, building structures, and sending chat messages.
+A simple Python script to interact with Minecraft using the `mcpi` library. It demonstrates basic Minecraft automation such as placing blocks, building simple structures, and sending chat messages.
 
 ## Features
 
-- Connect to a running Minecraft game (Java Edition with RaspberryJuice or Pi Edition)
-- Send messages to the in-game chat
-- Place blocks at player position
-- Build simple structures automatically
+- Connect to a running Minecraft world (Java Edition with RaspberryJuice plugin or Pi Edition)
+- Send messages directly to the in-game chat
+- Place blocks at the player's position
+- Automatically build small structures
 
 ## Requirements
 
@@ -15,7 +15,7 @@ A simple Python script to interact with Minecraft using the `mcpi` library. This
 - Minecraft Java Edition with **RaspberryJuice plugin** OR Minecraft Pi Edition
 - `mcpi` Python library  
 
-Install `mcpi` using pip:
+Install `mcpi` via pip:
 
 ```bash
 pip install mcpi
