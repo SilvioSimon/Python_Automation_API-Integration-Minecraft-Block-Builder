@@ -1,23 +1,21 @@
-# minecraft_python_test.py
-from mcpi.minecraft import Minecraft
-from mcpi import block
-import time
+# Minecraft Python Test
 
-# Connect to Minecraft
-mc = Minecraft.create()
+A simple Python script to interact with Minecraft using the `mcpi` library. This script demonstrates basic Minecraft automation, including placing blocks, building structures, and sending chat messages.
 
-# Post a message to the chat
-mc.postToChat("Hello from Python test!")
+## Features
 
-# Get player's position
-pos = mc.player.getTilePos()
+- Connect to a running Minecraft game (Java Edition with RaspberryJuice or Pi Edition)
+- Send messages to the in-game chat
+- Place blocks at player position
+- Build simple structures automatically
 
-# Place a block under the player
-mc.setBlock(pos.x, pos.y - 1, pos.z, block.DIAMOND_BLOCK)
+## Requirements
 
-# Build a simple tower of 5 blocks
-for i in range(5):
-    mc.setBlock(pos.x + 1, pos.y + i, pos.z, block.STONE)
-    time.sleep(0.2)  # small delay to see block appear
+- Python 3.x
+- Minecraft Java Edition with **RaspberryJuice plugin** OR Minecraft Pi Edition
+- `mcpi` Python library  
 
-mc.postToChat("Tower complete!")
+Install `mcpi` using pip:
+
+```bash
+pip install mcpi
