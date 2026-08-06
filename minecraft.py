@@ -1,19 +1,26 @@
 # Import Minecraft API
 from mcpi.minecraft import Minecraft
 from mcpi import block
-import time
 
-# Connect to the running Minecraft game
+# Connect to the running Minecraft instance
 mc = Minecraft.create()
 
-# Get the player's position
-pos = mc.player.getTilePos()
+# Get current player position
+position = mc.player.getTilePos()
 
-# Place a block above the player (e.g., diamond block)
-mc.setBlock(pos.x, pos.y + 1, pos.z, block.DIAMOND_BLOCK.id)
+# Place a diamond block above the player
+mc.setBlock(
+    position.x,
+    position.y + 1,
+    position.z,
+    block.DIAMOND_BLOCK.id
+)
 
-# Build a cube of stone blocks
-for x in range(pos.x, pos.x + 5):
-    for y in range(pos.y, pos.y + 5):
-        for z in range(pos.z, pos.z + 5):
+# Build a 5x5x5 stone cube automatically
+for x in range(position.x, position.x + 5):
+    for y in range(position.y, position.y + 5):
+        for z in range(position.z, position.z + 5):
             mc.setBlock(x, y, z, block.STONE.id)
+
+# Send completion message to Minecraft chat
+mc.postToChat("Automation finished: Stone cube created!")
