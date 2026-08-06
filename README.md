@@ -1,4 +1,4 @@
-# Minecraft Python Test
+# Python Automation & API Integration - Minecraft Block Builder
 
 A simple Python script to interact with Minecraft using the `mcpi` library. It demonstrates basic Minecraft automation such as placing blocks, building simple structures, and sending chat messages.
 
